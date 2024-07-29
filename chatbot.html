@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="utf-8">
+    <title>YOUR ASSISTANCE CHATBOT</title>
+    <link rel="stylesheet" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="script.js" defer></script>
+</head>
+
+<body class="show-chatbot">
+
+    <div class="background">
+        <img src="smBackground.png" alt="Background Image"> <!-- Your image file path -->
+    </div>
+
+    <div class="button-container">
+        <button class="top-button" id="close-btn">X</button>
+        <button class="top-button" id="comment-btn">💬</button>
+    </div>
+   
+    <div class="chatbot">
+        <header>
+            <h2>YOUR CHATBOT</h2>
+        </header>
+  
+
+
+        <ul class="chatbox">
+            <img src="ct.jpg" alt="Chat Icon" class="icon-img">
+            <li class="chat incoming">
+               
+                </span>
+                <p>Hi there <br> How can I help you today?</p>
+            </li>
+            <li class="chat outgoing">
+                <p>...</p>
+            </li>
+        </ul>
+        <div class="chat-input">
+            <textarea placeholder="Enter a message..." required></textarea>
+            <button id="send-btn">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="send-icon">
+                    <path d="M22 2L11 13M11 13L3 22L22 15 11 13z"></path>
+                </svg>
+            </button>
+        </div>
+    </div>
+</body>
+</html>

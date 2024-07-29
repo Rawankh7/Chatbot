@@ -1,0 +1,177 @@
+/* Reset default margins and paddings */
+* {
+    margin: 0; 
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+/* Body styling */
+body {
+    background: #e3f2fd;
+}
+
+/* Chatbot container styling */
+.chatbot {
+    position: fixed;
+    right: 40px;
+    bottom: 100px;
+    width: 420px;
+    background: #fff;
+    box-shadow: 0 0 128px 0 rgba(0,0,0,0.1), 0 32px 64px -48px rgba(0,0,0,0.5);
+    border-radius: 15px; /* Rounded edges for the chatbot container */
+    overflow: hidden; /* Ensure children do not overflow the rounded edges */
+}
+
+/* Header styling */
+.chatbot header {
+    background: rgba(7, 82, 152, 0.727);
+    padding: 16px 0;
+    text-align: center;
+    border-top-left-radius: 15px; /* Rounded top-left corner */
+    border-top-right-radius: 15px; /* Rounded top-right corner */
+}
+
+/* Header title styling */
+.chatbot header h2 {
+    color: #910446;
+    font-size: 1.4rem;
+}
+
+/* Chatbox styling */
+.chatbot .chatbox {
+    height: 510px;
+    overflow-y: auto;
+    padding: 15px 20px 70px;
+}
+
+/* Chat bubble styling */
+.chatbox .chat {
+    display: flex;
+}
+
+.chatbox .chat p {
+    color: #fff;
+    font-size: 0.95rem;
+    padding: 12px 16px;
+    border-radius: 10px; /* Rounded edges for chat bubbles */
+    background: #910446;
+}
+
+.chatbox .incoming p {
+    color: #000;
+    background: #f2f2f2;
+    border-radius: 10px; /* Rounded edges for incoming chat bubbles */
+}
+
+.chatbox .outgoing {
+    margin: 20px 0;
+    justify-content: flex-end;
+}
+
+/* Chat input area styling */
+.chatbot .chat-input {
+    position: absolute;
+    bottom: 0;
+    display: flex;
+    gap: 5px;
+    width: 100%;
+    background: #fff;
+    padding: 5px 20px;
+    border-top: 1px solid #ccc;
+    border-bottom-left-radius: 15px; /* Rounded bottom-left corner */
+    border-bottom-right-radius: 15px; /* Rounded bottom-right corner */
+}
+
+/* Textarea styling */
+.chat-input textarea { 
+    height: 55px;
+    width: 100%;
+    border: none;
+    outline: none;
+    font-size: 0.95rem;
+    resize: none;
+    padding: 16px 15px 16px 0;
+    border-radius: 10px; /* Rounded edges for the textarea */
+}
+
+/* Send button styling */
+button#send-btn {
+    background: #910446; /* Button background color */
+    border: none;
+    border-radius: 50%;
+    padding: 10px 15px;
+    cursor: pointer;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+button#send-btn .send-icon {
+    width: 24px; /* Adjust icon size as needed */
+    height: 24px;
+
+}
+
+/* Button container styling */
+.button-container {
+    position: absolute; /* Absolute positioning to place buttons within .chatbot */
+    bottom: 40px; /* Position from the bottom, adjust as needed */
+    right: 10px; /* Position from the right */
+    display: flex;
+    gap: 5px; /* Space between buttons */
+}
+
+/* Style for the top buttons */
+.top-button {
+    width: 30px; 
+    height: 30px; 
+    font-size: 16px; 
+    border-radius: 50%; /* Circular button */
+    border: none;
+    background-color: rgba(7, 82, 152, 0.727); /* Button background color */
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.top-button#close-btn {
+    background-color: #910446; /* Red background for close button */
+}
+
+.top-button#comment-btn {
+    background-color: rgba(7, 82, 152, 0.727); /* Green background for comment button */
+}
+
+/* Show chatbot styles */
+.show-chatbot .chatbot {
+    transform: scale(1);
+    opacity: 1;
+    pointer-events: auto;
+}
+
+/* Responsive styles for small screens */
+@media(max-width: 490px) {
+    .chatbot {
+        right: 0;
+        bottom: 0;
+        width: 100%;
+        height: 100%;
+        border-radius: 0; /* No rounded edges for full-screen view */
+    }
+    .chatbot .chatbox {
+        height: 90%;
+    }
+}
+.icon-img {
+    position: absolute; /* Absolute positioning within chatbox */
+    top: 10px; /* Distance from the top */
+    left: 10px; /* Distance from the left */
+    width: 44px; /* Adjust width as needed */
+    height: 44px; /* Adjust height as needed */
+    border-radius: 50%; /* Optional: make the icon circular */
+    object-fit: cover; /* Ensure the icon scales properly */
+}
